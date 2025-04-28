@@ -6,7 +6,7 @@ class Calculator {
     multiply(a, b) {
         return a * b;
     }
-}
+} 
 
 // Создаем калькулятор
 const calculator = new Calculator();
