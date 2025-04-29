@@ -10,6 +10,7 @@ class Fighter {
 }
 
 class Mage extends Fighter {
+
     attack() {
         console.log(this.name + " использует магическую атаку");
     }
