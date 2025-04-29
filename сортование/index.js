@@ -5,10 +5,10 @@ let array3 = [3, 11, 11, 0, 25, 18, 14, 7];
 
 function Sort(array) {
 
-    let cheker = false; //чекер щоб код поняв що вiн вже все вiдсортував
-    for (let i = 0; i <= array.length;) {
-        //якщо перше число бiльше другого
-        if (array[i] > array[i + 1]) {
+    let cheker = false; //чекер щоб код поняв що ще треба сортувати
+    
+    for (let i = 0; i <= array.length;) { //цикл
+        if (array[i] > array[i + 1]) {//якщо перше число бiльше другого
             cheker = true;
             let firstNum = array[i]
             let secondNum = array[i + 1]
@@ -16,14 +16,14 @@ function Sort(array) {
             array[i + 1] = firstNum;
         }
 
-        else { 
-            if (cheker) {
-                 i = -1; 
+        else { //якщо масир вiдсортувався
+            if (cheker) { //чек якщо ще не сортований вертаэмся 
+                 i = -1; // вiдкидую цикл спочатку
                  cheker = false; 
                 } 
             };
         i++;
     };
-    console.info('масив сортований:' + array);
+    console.info('масив сортований:' + array); //вивод iнформацii
 }
-Sort(array3);
+Sort(array3); // визов функцii
