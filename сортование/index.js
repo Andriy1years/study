@@ -1,12 +1,12 @@
 let array2 = [42, 5, 13, 9, 28, 6, 17];
-let array3 = [3, 11, 11, 0, 25, 18, 14, 7];
+let array3 = [3, 11, 12];
 
 
 
 function Sort(array) {
 
     let cheker = false; //чекер щоб код поняв що ще треба сортувати
-    
+
     for (let i = 0; i <= array.length;) { //цикл
         if (array[i] > array[i + 1]) {//якщо перше число бiльше другого
             cheker = true;
@@ -16,12 +16,12 @@ function Sort(array) {
             array[i + 1] = firstNum;
         }
 
-        else { //якщо масир вiдсортувався
+        else { //якщо масив вiдсортувався
             if (cheker) { //чек якщо ще не сортований вертаэмся 
-                 i = -1; // вiдкидую цикл спочатку
-                 cheker = false; 
-                } 
-            };
+                i = -1; // вiдкидую цикл спочатку
+                cheker = false;
+            }
+        };
         i++;
     };
     console.info('масив сортований:' + array); //вивод iнформацii
