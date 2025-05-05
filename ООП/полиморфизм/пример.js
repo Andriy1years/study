@@ -4,7 +4,7 @@ class Fighter {
     }
 }
 
-class Mage extends Fighter {
+ class Mage extends Fighter {
     //перезапись
     attack() {
         console.log("Маг атакует магией!");
