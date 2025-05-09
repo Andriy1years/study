@@ -1,6 +1,6 @@
 class Shape {
     constructor() {
-        if (this.target === Shape) {
+        if (new.target === Shape) {
             throw new Error("незя создавать обьект")
         }
 

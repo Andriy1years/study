@@ -2,7 +2,7 @@
 //abstract bilder
 class LaptopBilder {
     constructor() {
-        if (this.target === LaptopBilder) {
+        if (new.target === LaptopBilder) {
             throw new Error("незя делать обэкт на подобии абс класса")
         }
     }
@@ -52,7 +52,7 @@ class ShitPS extends LaptopBilder {
         return '-1 tr'
     };
     SetBattery() {
-        return "0 mAh"
+        return null
     };
 }
 //builder
