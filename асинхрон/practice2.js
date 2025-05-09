@@ -7,7 +7,7 @@ function delayedMultiply(a, b) {
     });
 }
 async function main() { 
-  
+
    let sum = await delayedMultiply(4, 5)
     console.log(sum);  
 }

@@ -1,36 +1,49 @@
-// синтаксис
+//для меня было тяжело понять отличие async function и function
+//основное отличие в том что в аснхроной функции она в любом случае вернет промис
 
-async function name(param) {
-    statements
- }
+//так же интересовался для чего вообще существует async await 
+// хотя вполне можно написать код и него ну вот ключевое слово можно а async исполюзуется для упрощения и большей читаемости кода
 
-
-
+//функция можно использовать и асинхную разницы нет
+//          \/ 
 function resolveAfter2Seconds(x) {
+//    возращаем промис из параметром из названием resolve 
+//           \/  
     return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(x);
+      setTimeout(() => {// задежка
+        resolve(x);// передаем в параметр resolve параметер x
       }, 2000);
     });
   }
-  
+  //асинхроная функция из параметром x
+  //      \/
   async function add1(x) {
-    const a = await resolveAfter2Seconds(20);
-    const b = await resolveAfter2Seconds(30);
-    return x + a + b;
+    
+    const a = await resolveAfter2Seconds(20);// переменая a из оператором await который передает числовое значение в функцию
+    const b = await resolveAfter2Seconds(30);// переменая b из оператором await который передает числовое значение в функцию
+    //так же примечание каждый из етих вызовов будет исполнятся по 2 секунды так что результат прийдет через 4
+    return x + a + b; //вертает результат 
   }
   
+// метод then в даном примере используется для вывода даных так как then вызывается когда код async или промисе выпонился
+//      /\
   add1(10).then((v) => {
     console.log(v); // prints 60 after 4 seconds.
   });
+
+  //такой же код как и сверху но немного изменен 
+  //      \/           \/            \/
   
   async function add2(x) {
     const a = resolveAfter2Seconds(20);
     const b = resolveAfter2Seconds(30);
-    return x + (await a) + (await b);
+    return x + (await a) + (await b);// отличие в этом примере в том что сдесь 2 промиса исполняются паралельно а в 1 примере последовательно
   }
   
   add2(10).then((v) => {
     console.log(v); // prints 60 after 2 seconds.
   });
+  
+  let abc = await add2(20)
+  console.log(abc);
   
