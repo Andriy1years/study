@@ -2,9 +2,25 @@
 //abstract bilder
 class LaptopBilder {
     constructor() {
+
         if (new.target === LaptopBilder) {
             throw new Error("незя делать обэкт на подобии абс класса")
         }
+    }
+    laptop = {
+        MonitorResolution: "",
+        Processor: "",
+        Memory: "",
+        HDD: "",
+        Battery: ""
+    }
+    Laptop;
+    CreateNewLaptop() {
+        this.Laptop = new Laptop()
+    }
+    GetMyLaptop() {
+        console.log(this.laptop);
+        return this.laptop
     }
 
     SetMonitorResolution() { throw new Error('пожалуйста опишите монитор') };
@@ -12,33 +28,33 @@ class LaptopBilder {
     SetMemory() { throw new Error('пожалуйста опишите озу') };
     SetHDD() { throw new Error('пожалуйста опишите HDD') };
     SetBattery() { throw new Error('пожалуйста опишите батарею') };
+
 }
 //builder
 class GamingPS extends LaptopBilder {
-    constructor() {
-        super()
-    }
+
+
     SetMonitorResolution() {
-        return "1980X1080";
+        this.laptop.MonitorResolution = "1980X1080";
     };
     SetProcessor() {
-        return "i9 14700"
+        this.laptop.Processor = "i9 14700";
     };
     SetMemory() {
-        return "64 gb"
+        this.laptop.Memory = "64gb";
+
     };
     SetHDD() {
-        return '2 tr'
+        this.laptop.HDD = "2tr";
+
     };
     SetBattery() {
-        return "10000 mAh"
+        this.laptop.Battery = "1000mAh";
+
     };
 }
 //builder
 class ShitPS extends LaptopBilder {
-    constructor() {
-        super()
-    }
     SetMonitorResolution() {
         return "19X12";
     };
@@ -52,14 +68,12 @@ class ShitPS extends LaptopBilder {
         return '-1 tr'
     };
     SetBattery() {
-        return null
+        return "null"
     };
 }
 //builder
 class NormalPS extends LaptopBilder {
-    constructor() {
-        super()
-    }
+
     SetMonitorResolution() {
         return "1980X1080";
     };
@@ -78,27 +92,60 @@ class NormalPS extends LaptopBilder {
 }
 //director
 class BuyLaptop {
-    #_laptopBuilder = ""
-    #_getlaptop = []
-    SetLaptopBuilder(setlaptop) {
-        this.#_laptopBuilder = setlaptop
+    #_laptopBuilder;
+
+    SetLaptopBuilder(lBuilder) {
+        this.#_laptopBuilder = lBuilder
+
     }
     GetLaptop() {
-        return this.#_getlaptop
+        return this.#_laptopBuilder.GetMyLaptop()
     }
     ConstructLaptop() {
-        this.#_getlaptop.push(this.#_laptopBuilder.SetMonitorResolution())
-        this.#_getlaptop.push(this.#_laptopBuilder.SetProcessor())
-        this.#_getlaptop.push(this.#_laptopBuilder.SetMemory())
-        this.#_getlaptop.push(this.#_laptopBuilder.SetHDD())
-        this.#_getlaptop.push(this.#_laptopBuilder.SetBattery())
+        this.#_laptopBuilder.CreateNewLaptop()
+        this.#_laptopBuilder.SetMonitorResolution()
+        this.#_laptopBuilder.SetProcessor()
+        this.#_laptopBuilder.SetMemory()
+        this.#_laptopBuilder.SetHDD()
+        this.#_laptopBuilder.SetBattery()
+       
+    }
+
+}
+
+class Laptop {
+    constructor(Laptop) {
+        this.Laptop = Laptop
+    }
+
+    MonitorResolution() {
+        return this.Laptop.MonitorResolution
+    }
+    Processor() {
+        return this.Laptop.Processor
+    }
+    Memory() {
+        return this.Laptop.Memory
+    }
+    HDD() {
+        return this.Laptop.HDD
+    }
+    Battery() {
+        return this.Laptop.Battery
+    }
+    ToString() {
+        return [this.MonitorResolution(),this.Processor(), this.Memory(), this.HDD(),this.Battery()];
     }
 }
 const gamePS = new GamingPS()
+
+
 const normalPS = new NormalPS()
 const shitPS = new ShitPS()
 const buyLaptop = new BuyLaptop()
 
-buyLaptop.SetLaptopBuilder(shitPS)
+
+buyLaptop.SetLaptopBuilder(gamePS)
 buyLaptop.ConstructLaptop()
-console.log(buyLaptop.GetLaptop());
+const laptop = new Laptop(buyLaptop.GetLaptop())
+console.log(laptop.ToString());

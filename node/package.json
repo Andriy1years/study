@@ -4,6 +4,7 @@
   "description": "study",
   "license": "ISC",
   "author": "andriy",
+ 
   "type": "commonjs",
   "main": "nodejs.js",
   "scripts": {
