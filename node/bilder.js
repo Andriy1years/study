@@ -51,8 +51,8 @@ class GamingPS extends LaptopBilder {
         this.Laptop.Processor("i9 14700");
     };
 
-    SetMemory() {
-        this.Laptop.OZY("64gb");
+    setRAM () {
+        this.Laptop.RAM ("64gb");
     };
 
     SetHDD() {
@@ -61,53 +61,6 @@ class GamingPS extends LaptopBilder {
 
     SetBattery() {
         this.Laptop.Battery("1000mAh");
-    };
-}
-
-//builder
-class ShitPS extends LaptopBilder {
-    SetMonitorResolution() {
-        return "19X12";
-    };
-
-    SetProcessor() {
-        return "i0 14700"
-    };
-
-    SetMemory() {
-        return "1 mb"
-    };
-
-    SetHDD() {
-        return '-1 tr'
-    };
-
-    SetBattery() {
-        return "null"
-    };
-}
-
-//builder
-class NormalPS extends LaptopBilder {
-
-    SetMonitorResolution() {
-        return "1980X1080";
-    };
-
-    SetProcessor() {
-        return "i3 10100"
-    };
-
-    SetMemory() {
-        return "16 gb"
-    };
-
-    SetHDD() {
-        return '1 tr'
-    };
-
-    SetBattery() {
-        return "5000 mAh"
     };
 }
 
@@ -128,7 +81,7 @@ class BuyLaptop {
         this.#_laptopBuilder.CreateNewLaptop()
         this.#_laptopBuilder.SetMonitorResolution()
         this.#_laptopBuilder.SetProcessor()
-        this.#_laptopBuilder.SetMemory()
+        this.#_laptopBuilder.setRAM()
         this.#_laptopBuilder.SetHDD()
         this.#_laptopBuilder.SetBattery()
 
@@ -139,7 +92,7 @@ class BuyLaptop {
 class Laptop {
     #monitor;
     #processor;
-    #ozy;
+    #ram;
     #hdd;
     #battery;
 
@@ -151,8 +104,8 @@ class Laptop {
         this.#processor = set
     }
 
-    OZY(set) {
-        this.#ozy = set
+    RAM(set) {
+        this.#ram = set
     }
 
     HDD(set) {
@@ -164,13 +117,12 @@ class Laptop {
     }
 
     ToArray() {
-        return [this.#monitor, this.#processor, this.#ozy, this.#hdd, this.#battery];
+        return [this.#monitor, this.#processor, this.#ram, this.#hdd, this.#battery];
     }
 }
 
 const gamePS = new GamingPS()
-// const normalPS = new NormalPS()
-// const shitPS = new ShitPS()
+
 const buyLaptop = new BuyLaptop()
 
 
