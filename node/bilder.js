@@ -1,4 +1,3 @@
-
 //abstract bilder
 class LaptopBilder {
     constructor() {
@@ -7,89 +6,111 @@ class LaptopBilder {
             throw new Error("незя делать обэкт на подобии абс класса")
         }
     }
-    laptop = {
-        MonitorResolution: "",
-        Processor: "",
-        Memory: "",
-        HDD: "",
-        Battery: ""
-    }
+
     Laptop;
+
     CreateNewLaptop() {
         this.Laptop = new Laptop()
     }
+
     GetMyLaptop() {
-        console.log(this.laptop);
-        return this.laptop
+        return this.Laptop;
     }
 
-    SetMonitorResolution() { throw new Error('пожалуйста опишите монитор') };
-    SetProcessor() { throw new Error('пожалуйста опишите процесор') };
-    SetMemory() { throw new Error('пожалуйста опишите озу') };
-    SetHDD() { throw new Error('пожалуйста опишите HDD') };
-    SetBattery() { throw new Error('пожалуйста опишите батарею') };
+    SetMonitorResolution() {
+        throw new Error('пожалуйста опишите монитор')
+    };
+
+    SetProcessor() {
+        throw new Error('пожалуйста опишите процесор')
+    };
+
+    SetMemory() {
+        throw new Error('пожалуйста опишите озу')
+    };
+
+    SetHDD() {
+        throw new Error('пожалуйста опишите HDD')
+    };
+
+    SetBattery() {
+        throw new Error('пожалуйста опишите батарею')
+    };
 
 }
+
 //builder
 class GamingPS extends LaptopBilder {
 
 
     SetMonitorResolution() {
-        this.laptop.MonitorResolution = "1980X1080";
+        this.GetMyLaptop().MonitorResolution("1980x1080");
     };
+
     SetProcessor() {
-        this.laptop.Processor = "i9 14700";
+        this.Laptop.Processor("i9 14700");
     };
+
     SetMemory() {
-        this.laptop.Memory = "64gb";
-
+        this.Laptop.OZY("64gb");
     };
+
     SetHDD() {
-        this.laptop.HDD = "2tr";
-
+        this.Laptop.HDD("2tr");
     };
-    SetBattery() {
-        this.laptop.Battery = "1000mAh";
 
+    SetBattery() {
+        this.Laptop.Battery("1000mAh");
     };
 }
+
 //builder
 class ShitPS extends LaptopBilder {
     SetMonitorResolution() {
         return "19X12";
     };
+
     SetProcessor() {
         return "i0 14700"
     };
+
     SetMemory() {
         return "1 mb"
     };
+
     SetHDD() {
         return '-1 tr'
     };
+
     SetBattery() {
         return "null"
     };
 }
+
 //builder
 class NormalPS extends LaptopBilder {
 
     SetMonitorResolution() {
         return "1980X1080";
     };
+
     SetProcessor() {
         return "i3 10100"
     };
+
     SetMemory() {
         return "16 gb"
     };
+
     SetHDD() {
         return '1 tr'
     };
+
     SetBattery() {
         return "5000 mAh"
     };
 }
+
 //director
 class BuyLaptop {
     #_laptopBuilder;
@@ -98,9 +119,11 @@ class BuyLaptop {
         this.#_laptopBuilder = lBuilder
 
     }
+
     GetLaptop() {
         return this.#_laptopBuilder.GetMyLaptop()
     }
+
     ConstructLaptop() {
         this.#_laptopBuilder.CreateNewLaptop()
         this.#_laptopBuilder.SetMonitorResolution()
@@ -108,44 +131,50 @@ class BuyLaptop {
         this.#_laptopBuilder.SetMemory()
         this.#_laptopBuilder.SetHDD()
         this.#_laptopBuilder.SetBattery()
-       
+
     }
 
 }
 
 class Laptop {
-    constructor(Laptop) {
-        this.Laptop = Laptop
+    #monitor;
+    #processor;
+    #ozy;
+    #hdd;
+    #battery;
+
+    MonitorResolution(set) {
+        this.#monitor = set
     }
 
-    MonitorResolution() {
-        return this.Laptop.MonitorResolution
+    Processor(set) {
+        this.#processor = set
     }
-    Processor() {
-        return this.Laptop.Processor
+
+    OZY(set) {
+        this.#ozy = set
     }
-    Memory() {
-        return this.Laptop.Memory
+
+    HDD(set) {
+        this.#hdd = set
     }
-    HDD() {
-        return this.Laptop.HDD
+
+    Battery(set) {
+        this.#battery = set
     }
-    Battery() {
-        return this.Laptop.Battery
-    }
-    ToString() {
-        return [this.MonitorResolution(),this.Processor(), this.Memory(), this.HDD(),this.Battery()];
+
+    ToArray() {
+        return [this.#monitor, this.#processor, this.#ozy, this.#hdd, this.#battery];
     }
 }
+
 const gamePS = new GamingPS()
-
-
-const normalPS = new NormalPS()
-const shitPS = new ShitPS()
+// const normalPS = new NormalPS()
+// const shitPS = new ShitPS()
 const buyLaptop = new BuyLaptop()
 
 
 buyLaptop.SetLaptopBuilder(gamePS)
 buyLaptop.ConstructLaptop()
-const laptop = new Laptop(buyLaptop.GetLaptop())
-console.log(laptop.ToString());
+const laptop = buyLaptop.GetLaptop()
+console.log(laptop.ToArray());

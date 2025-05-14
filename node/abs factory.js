@@ -1,3 +1,4 @@
+//интерфейс
 class IToyFactory {
     GetBear() {
     throw new Error('пожалуйста опишите bear')
@@ -6,7 +7,7 @@ class IToyFactory {
     throw new Error('пожалуйста опишите cat')
     }
 }
-
+//наследование от интерфейса
 class TeddyToysFactory extends IToyFactory {
     GetBear() {
         return new TedyBear();
@@ -15,7 +16,7 @@ class TeddyToysFactory extends IToyFactory {
         return new TedyCat();
     }
 }
-
+//наследование от интерфейса
 class WoodenToysFactory extends IToyFactory {
     GetBear() {
         return new WoodenBear();
@@ -24,6 +25,7 @@ class WoodenToysFactory extends IToyFactory {
         return new WoodenCat();
     }
 }
+//абс класс
 class AnimalToy {
     constructor(Name) {
         this.Name = Name;
@@ -32,6 +34,7 @@ class AnimalToy {
         return this.Name
     }
 }
+//наследование от абс
 class Cat extends AnimalToy {
     constructor(Name) {
         super(Name);
@@ -43,6 +46,7 @@ class Bear extends AnimalToy {
     }
 }
 
+// фабрики
 class TedyBear extends Bear {
     constructor() {
         super('Teddy Bear');
@@ -83,6 +87,6 @@ class AbstractFactory {
         console.log("у мемя есть " + bear.GetAnimalToy() +" и " + cat.GetAnimalToy());
     }
 }
-
+// запуск
 let abstractFactory = new AbstractFactory();
 abstractFactory.Run()
