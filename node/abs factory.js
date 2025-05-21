@@ -7,6 +7,8 @@ class IToyFactory {
     throw new Error('пожалуйста опишите cat')
     }
 }
+
+
 //наследование от интерфейса
 class TeddyToysFactory extends IToyFactory {
     GetBear() {
@@ -25,6 +27,7 @@ class WoodenToysFactory extends IToyFactory {
         return new WoodenCat();
     }
 }
+// так называемая абс фабрика
 //абс класс
 class AnimalToy {
     constructor(Name) {

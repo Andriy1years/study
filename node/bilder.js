@@ -25,7 +25,7 @@ class LaptopBilder {
         throw new Error('пожалуйста опишите процесор')
     };
 
-    SetMemory() {
+    setRAM() {
         throw new Error('пожалуйста опишите озу')
     };
 
@@ -48,19 +48,19 @@ class GamingPS extends LaptopBilder {
     };
 
     SetProcessor() {
-        this.Laptop.Processor("i9 14700");
+        this.GetMyLaptop().Processor("i9 14700");
     };
 
     setRAM () {
-        this.Laptop.RAM ("64gb");
+        this.GetMyLaptop().RAM ("64gb");
     };
 
     SetHDD() {
-        this.Laptop.HDD("2tr");
+        this.GetMyLaptop().HDD("2tr");
     };
 
     SetBattery() {
-        this.Laptop.Battery("1000mAh");
+        this.GetMyLaptop().Battery("1000mAh");
     };
 }
 

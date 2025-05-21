@@ -10,7 +10,8 @@
   "scripts": {
     "bebr": "node nodejs.js",
     "bilder": "node bilder.js",
-    "abs": "node abstract_class.js"
+    "abs": "node abstract_class.js",
+    "clon": "this.js"
   },
   "dependencies": {
     "cowsay": "^1.6.0",
