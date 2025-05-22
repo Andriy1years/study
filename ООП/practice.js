@@ -5,7 +5,7 @@ class fighter {
      }
     Defend() {
      }
-};
+}
 //дочерние классы 
 class mage extends fighter { //через extends идет наследование 
         //преопределение методов в функции
@@ -14,7 +14,7 @@ class mage extends fighter { //через extends идет наследован�
         }
        Defend(defend) {
         console.log('маг защищается ' + defend)
-        r
+
         }
 }
 class Swordsman extends fighter {
