@@ -1,0 +1,57 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.5 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.5">
+  <diagram name="Страница — 1" id="VY5L8G_GHMMT-rwlM01A">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IH8jaRtK42i6oRECXhNz-1" value="&lt;div&gt;class Nodes&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IH8jaRtK42i6oRECXhNz-2" value="class BinaryTree" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IH8jaRtK42i6oRECXhNz-3" value="object&lt;div&gt;&lt;span style=&quot;color: rgb(199, 125, 186); font-style: italic; font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; background-color: rgb(30, 31, 34);&quot;&gt;mytree&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IH8jaRtK42i6oRECXhNz-4" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="IH8jaRtK42i6oRECXhNz-2" target="IH8jaRtK42i6oRECXhNz-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="450" as="sourcePoint" />
+            <mxPoint x="690" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IH8jaRtK42i6oRECXhNz-5" value="&lt;div style=&quot;background-color:#1e1f22;color:#bcbec4&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9,8pt;&quot;&gt;&lt;span style=&quot;color:#c77dba;font-style:italic;&quot;&gt;mytree&lt;/span&gt;.&lt;span style=&quot;color:#56a8f5;&quot;&gt;add&lt;/span&gt;(&lt;span style=&quot;color:#2aacb8;&quot;&gt;8&lt;/span&gt;);&lt;/pre&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IH8jaRtK42i6oRECXhNz-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="IH8jaRtK42i6oRECXhNz-5" target="IH8jaRtK42i6oRECXhNz-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="290" as="sourcePoint" />
+            <mxPoint x="390" y="290" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IH8jaRtK42i6oRECXhNz-20" value="root value" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IH8jaRtK42i6oRECXhNz-7">
+          <mxGeometry x="0.0814" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IH8jaRtK42i6oRECXhNz-12" value="&lt;div style=&quot;background-color:#1e1f22;color:#bcbec4&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9,8pt;&quot;&gt;&lt;span style=&quot;color:#c77dba;font-style:italic;&quot;&gt;mytree&lt;/span&gt;.&lt;span style=&quot;color:#56a8f5;&quot;&gt;add&lt;/span&gt;(&lt;span style=&quot;color:#2aacb8;&quot;&gt;7&lt;/span&gt;);&lt;br&gt;&lt;span style=&quot;color:#c77dba;font-style:italic;&quot;&gt;mytree&lt;/span&gt;.&lt;span style=&quot;color:#56a8f5;&quot;&gt;add&lt;/span&gt;(&lt;span style=&quot;color:#2aacb8;&quot;&gt;9&lt;/span&gt;);&lt;br&gt;&lt;span style=&quot;color:#c77dba;font-style:italic;&quot;&gt;mytree&lt;/span&gt;.&lt;span style=&quot;color:#56a8f5;&quot;&gt;add&lt;/span&gt;(&lt;span style=&quot;color:#2aacb8;&quot;&gt;5&lt;/span&gt;);&lt;/pre&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IH8jaRtK42i6oRECXhNz-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="IH8jaRtK42i6oRECXhNz-12" target="IH8jaRtK42i6oRECXhNz-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="450" as="sourcePoint" />
+            <mxPoint x="690" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IH8jaRtK42i6oRECXhNz-18" value="value" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IH8jaRtK42i6oRECXhNz-16">
+          <mxGeometry x="0.0246" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
