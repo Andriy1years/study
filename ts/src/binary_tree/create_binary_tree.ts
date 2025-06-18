@@ -1,6 +1,6 @@
 class CreateObj {
-    private left: null | object;
-    private right: null | object;
+    public left: null | CreateObj;
+    public right: null | CreateObj;
 
     constructor(public value: number) {
         this.value = value
@@ -12,29 +12,29 @@ class CreateObj {
 
 
 class CreateBinaryTree {
-    private main: null | object = null;
+    private main: null | CreateObj = null;
 
-    private curentObj: any
+
 
     add(value: number) {
-        let newObj: CreateObj = new CreateObj(value)
+        let newObj = new CreateObj(value)
         if (!this.main) {
             return this.main = newObj;
+
         }
+            let curentObj: null | CreateObj = this.main;
 
-        this.curentObj = this.main
-
-        while (this.curentObj) {
-            if (newObj.value < this.curentObj.value) {
-                if (!this.curentObj.left) {
-                    return this.curentObj.left = newObj;
+        while (curentObj) {
+            if (newObj.value < curentObj.value) {
+                if (!curentObj.left) {
+                    return curentObj.left = newObj;
                 }
-                this.curentObj = this.curentObj.left;
+                curentObj = curentObj.left;
             } else {
-                if (!this.curentObj.right) {
-                    return this.curentObj.right = newObj;
+                if (!curentObj.right) {
+                    return curentObj.right = newObj;
                 }
-                this.curentObj = this.curentObj.right;
+                curentObj = curentObj.right;
             }
         }
     }

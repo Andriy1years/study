@@ -4,6 +4,67 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Iskptr5n3KI_S-kglAJl-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="cFPTiEo34OpYanmG_ZgO-1" target="Iskptr5n3KI_S-kglAJl-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cFPTiEo34OpYanmG_ZgO-1" value="запуск" style="rounded=1;whiteSpace=wrap;html=1;fontSize=21;" parent="1" vertex="1">
+          <mxGeometry x="460" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Iskptr5n3KI_S-kglAJl-6" target="Iskptr5n3KI_S-kglAJl-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Iskptr5n3KI_S-kglAJl-6" target="Iskptr5n3KI_S-kglAJl-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Iskptr5n3KI_S-kglAJl-6" target="Iskptr5n3KI_S-kglAJl-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-6" value="в обьект хранителя записываются даные" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Iskptr5n3KI_S-kglAJl-10" target="Iskptr5n3KI_S-kglAJl-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-10" value="вызов&lt;br&gt;сохранения" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Iskptr5n3KI_S-kglAJl-11" target="Iskptr5n3KI_S-kglAJl-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-11" value="вызов записи" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Iskptr5n3KI_S-kglAJl-13" target="Iskptr5n3KI_S-kglAJl-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-13" value="вызов отката&amp;nbsp;&lt;div&gt;&quot;load&quot;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Iskptr5n3KI_S-kglAJl-15" target="Iskptr5n3KI_S-kglAJl-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-15" value="делает push в пуше вызывает функцию&amp;nbsp;&lt;br&gt;игры" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="354" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-17" value="функ. игры возращает функцию хранителя где записываются даные" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="460" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-19" value="вызывается функция записи или каких либо действий" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="354" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Iskptr5n3KI_S-kglAJl-21" target="Iskptr5n3KI_S-kglAJl-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-21" value="вызывает функцию игры из аргументом который вертает последний елемент переменой гранителя&amp;nbsp;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="354" width="120" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="Iskptr5n3KI_S-kglAJl-23" value="функция меняет даные на те что были переданы аргументом" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
