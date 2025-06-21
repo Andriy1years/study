@@ -3,8 +3,8 @@ class Game {
     private tes = new GameMemento();
 
     public Play(): void {
-        console.log(this.state);
         this.state = new GameState(this.state.hp * 0.9, this.state.monster + 2);
+        console.log(this.state);
     }
 
     public GameSave() {
@@ -28,11 +28,11 @@ class GameMemento {
 
     public GameMementoFunk(state: GameState) {
         this._state = state;
-        console.log("test",this._state)
+        console.log("save ", this._state)
     }
 
     public GameLoad() {
-        console.log(this._state)
+        console.log("load ",this._state)
         return this._state;
     }
 
@@ -62,8 +62,5 @@ caretaker.ShootThatDumpAss();
 caretaker.F5();
 caretaker.ShootThatDumpAss();
 caretaker.ShootThatDumpAss();
-caretaker.ShootThatDumpAss();
 caretaker.F9();
 caretaker.ShootThatDumpAss();
-
-

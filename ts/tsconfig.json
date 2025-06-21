@@ -2,12 +2,13 @@
   "compilerOptions": {
     "lib": ["es2015", "dom"],
     "outDir": "dist",
-    "target": "es2016",
+    "target": "es2020",
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
+    "strict": false,
+    "skipLibCheck": true,
+    "moduleResolution": "node"
   },
   "include": ["src/**/*"]
 }
